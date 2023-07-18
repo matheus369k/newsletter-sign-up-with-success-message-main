@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontBold;
+    src: url('../assets/fonts/Roboto-Bold.ttf') format(opentype);
+}
+
+@font-face {
+    font-family: fontnormal;
+    src: url('../assets/fonts/Roboto-Regular.ttf') format(opentype);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    font-family: 'fontBold', 'fontnormal';
+    font: normal 1em;
+    background-color:  hsl(231, 7%, 60%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 375px;
+    background-color: rgb(255, 255, 255);
+}
+
+section.picture{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section.text h1{
+    font-size: 2.4em;
+    margin-bottom: 30px;
+}
+
+
+ul li{
+    margin-top: 15px;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+}
+
+li p{
+    padding-top: 15px;
+}
+
+img.check{
+    margin-right: 10px;
+}
+
+section.text,
+section.login{
+    font-size: 1em;
+    text-align: justify;
+    margin: 30px 30px 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+section.login{
+    margin-top: 40px;
+}
+
+section.login input{
+    width: 96%;
+    margin: 10px 0px 10px 5px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+input.button{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(233, 35%, 18%) ;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.521);
+    cursor: pointer;
+}
+
+input.button:hover{
+    background-color:  hsl(233, 29%, 29%) ;
+}
+
+section.off{
+    display: none;
+}
+
+footer{
+    color: white;
+    background-color:  hsl(233, 35%, 18%) ;
+
+    padding: 10px 0px;
+    width: 375px;
+
+    font-size: 0.6em;
+    text-align: center;
+}
+
+div a{
+    text-decoration: none;
+    color: white;
+}
+
+div a:hover{
+    color: orangered;
+}
