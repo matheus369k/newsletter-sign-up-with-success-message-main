@@ -1,0 +1,76 @@
+@media screen and (min-width:1225px) {
+    main{
+        border-radius: 20px;
+    }
+
+    section.registeron{
+        margin-left: 50px ;
+        width: 1200px;
+        height: 800px;
+    }
+
+    section.registeron section.picture{
+        z-index: 1px;
+        width: 500px;
+        float: right; 
+        height: 760px;
+        border-radius: 20px;
+    
+        background: url('../assets/images/illustration-sign-up-desktop.svg') center center no-repeat;
+        background-size: cover;
+        margin: 5px 30px 20px;
+    }
+
+    section.registeron section.text h1{
+        padding: 70px 0px 50px;
+        font-size: 4em;
+    }
+
+    p span.msgerro{
+        text-align: right;
+        margin-left: 290px;
+    }
+
+    section.text p {
+        margin: 10px 5px;
+        font-size: 1.2em;
+        width: 560px;
+    }
+
+    section.login input,
+    section.inviteon button{
+        font-size: 1.4em;
+        width: 50%;
+        height: 70px;
+        margin-top: 30px;
+    }
+
+    section.credits div{
+        text-align: left;
+        font-size: 1.4em;
+    }
+
+    section.inviteon{
+        padding: 30px;
+        width: 550px;
+        height: 550px;
+        
+    }
+
+    section.inviteon img.check{
+        margin: 0px 0px 40px;
+    }
+
+    section.inviteon h1{
+        font-size: 3em;
+        margin-right: 150px;
+    }
+
+    section.inviteon p{
+        font-size: 1.2em;
+    }
+
+    section.inviteon button{
+        width: 100%;
+    }
+}

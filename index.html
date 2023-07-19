@@ -9,70 +9,84 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mediaquery.css">
+
 </head>
 <body>
   <main>
-    <section class="picture">
-        <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
-    </section>
-    <section class="text">
-      <h1>Stay updated!</h1>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
-        <li>
-          <img 
-          class="check"
-          src="assets/images/icon-list.svg" 
-          alt="icon Check">
-           <p>
-            Product discovery and building what matters
-          </p>
+    <section id="register" class="registeron">
+      <section class="picture">
+      </section>
+      <section class="text">
+       
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>
+            <img
+            class="check"
+            src="assets/images/icon-list.svg"
+            alt="icon Check">
+             <p>
+              Product discovery and building what matters
+            </p>
+            </li>
+          <li>
+            <img
+            class="check"
+            src="assets/images/icon-list.svg"
+            alt="icon Check">
+            <p>
+              Measuring to ensure updates are a success
+            </p>
           </li>
-        <li>
-          <img
-          class="check"
-          src="assets/images/icon-list.svg" 
-          alt="icon Check">
-          <p>
-            Measuring to ensure updates are a success
-          </p>
-        </li>
-        <li>
-          <img
-          class="check"
-          src="assets/images/icon-list.svg" 
-          alt="icon Check">
-          <p>
-            And much more!
-          </p>
-        </li>
-      </ul>
+          <li>
+            <img
+            class="check"
+            src="assets/images/icon-list.svg"
+            alt="icon Check">
+            <p>
+              And much more!
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="login">
+        <p>
+          Email address
+          <span class="msgerro" id="msgerro">
+
+          </span>
+        </p>
+        <p>
+          <input class="box" type="email" name="email" id="iemail" 
+          placeholder="email@company.com">
+        </p>
+        <p>
+          <input id="buttonregister" class="button" type="submit" 
+          value="Subscribe to monthly newsletter">
+        </p>
+      </section> 
+      <section class="credits">
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="#">Your Name Here</a>.
+        </div>
+      </section>
     </section>
-    <section class="login">
-      <p>
-        Email address
-      </p>
-      <p>
-        <input class="box" type="email" name="email" id="iemail" placeholder="email@company.com">
-      </p>
-      <p>
-        <input class="button" type="submit" value="Subscribe to monthly newsletter">
-      </p>
-    </section>
-  
-    <section  class="off">
-      <h1>Thanks for subscribing!</h1>
-      <p>
-        A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription. 
-      </p>
-      <button>Dismiss message</button>
+    <section id="invite" class="inviteoff">
+        <img class="check" src="assets/images/icon-success.svg" alt="Simbulo de confirmado">
+        <h1>
+          Thanks for subscribing!
+        </h1>
+        <p>
+          A confirmation email has been sent to <span id="msgemail"></span>. Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button id="buttoninvite">
+          Dismiss message
+        </button>
     </section>
   </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </footer>
+  <script src="js/index.js"></script>
 </body>
 </html>
