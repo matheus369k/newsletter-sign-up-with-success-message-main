@@ -14,12 +14,14 @@ buttonRegister.addEventListener('click', () => {
     
     const verification = emailValue.match(/@gmail.com/)
 
-    console.log(verification);
-
     if (verification != null){
+        email.classList.remove('erro')
+        msgErro.innerHTML = ''
+
         register.classList.replace('registeron','registeroff')
         invite.classList.replace('inviteoff','inviteon')
     }else{
+        email.classList.add('erro')
         msgErro.innerHTML = `Valid email required`
     }
     
