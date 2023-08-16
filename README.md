@@ -10,7 +10,7 @@ __*Nota*__: O foco desse projeto e uma adençāo de um email para recebimento de
 - [Linguagem utilizadas](#linguagem-utilizadas)
 - [Codigo](#codigo)
    - [CSS](#css)
-   - [JavaScript]($javascript)
+   - [JavaScript](#javascript)
 - [Licença](#licença) 
 
 ### 📕Linguagem utilizadas
