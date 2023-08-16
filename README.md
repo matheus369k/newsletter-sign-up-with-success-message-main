@@ -1,4 +1,4 @@
-# 💻newsletter sign up with-success message main
+# 💻newsletter sign up with success message main
 <div align="center">
  
 ![j](https://github.com/matheus369k/newsletter-sign-up-with-success-message-main/assets/47065962/87b05865-e87e-4190-945c-29c5d12e1f7d)</div>
