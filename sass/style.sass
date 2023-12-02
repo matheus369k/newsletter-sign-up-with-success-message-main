@@ -1,0 +1,141 @@
+@use '_mixins'
+
+@use '_variables'
+
+@import 'reset'
+
+@import 'fonts'
+
+html, body
+    font-family: fontBold
+
+    @include mixins.body-size()
+
+    @include mixins.flex-center()
+
+    background-color: variables.$color-darkgreay
+
+    main
+
+        @include mixins.flex-center()
+
+        flex-direction: row
+
+        padding: 20px
+
+        height: 650px
+        width: 1024px
+
+        column-gap: 20px
+
+        border-radius: 40px
+
+        .container_information
+
+            width: 60%
+            padding: 0 60px
+
+            @include mixins.flex-center()
+
+            align-items: flex-start
+
+            flex-direction: column
+
+            row-gap: 30px
+
+            &_title
+                font-size: 4em
+
+                color: variables.$color-darkgreay
+
+            &_text
+                letter-spacing: 1px
+                line-height: 28px
+
+                color: variables.$color-charcoalgray
+
+            &_list
+                row-gap: 15px
+                
+                display: flex
+
+                flex-direction: column
+
+                li
+                    @include mixins.flex-center()
+                    
+                    column-gap: 20px
+
+                    align-self: start
+                   
+
+
+        .container_picture
+            @include mixins.bg-img("../assets/images/illustration-sign-up-desktop.svg")
+
+            height: 100%
+            width: 65%
+            
+            border-radius: 20px
+
+        .container_information_form 
+            width: 100%
+            height: min-content
+
+            row-gap: 5px
+
+            @include mixins.flex-center()
+
+            align-items: flex-start
+            flex-direction: column
+
+            label
+                width: 100%
+
+                display: flex
+                justify-content: space-between
+
+                color: variables.$color-darkgreay
+
+                span 
+                    color: #ff000081
+
+
+                    font-size: 14px
+
+            input 
+                @include mixins.btn-input()
+                width: calc( 100% - 20px )
+                
+                border: 2px solid variables.$color-light-gray
+
+                padding-left: 20px
+
+                cursor: pointer
+
+                &:focus
+                    cursor: auto
+
+                    border: 2px solid variables.$color-charcoalgray
+
+            .err
+                border: 2px solid #ff000044
+
+                color: #ff000081
+
+                background-color: rgba(255, 0, 0, 0.124)
+
+
+        .btn 
+            @include mixins.btn-input()
+
+            background-color: variables.$color-darkgreay
+            color: variables.$color-white
+
+            cursor: pointer
+
+            &:hover
+                background-image: variables.$btn-gradient
+            
+
+

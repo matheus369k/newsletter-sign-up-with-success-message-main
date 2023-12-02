@@ -1,92 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page login on the Newsletter.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
+  <link rel="stylesheet" href="./css/style.css">
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mediaquery.css">
-
 </head>
+
 <body>
   <main>
-    <section id="register" class="registeron">
-      <section class="picture">
-      </section>
-      <section class="text">
-       
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>
-            <img
-            class="check"
-            src="assets/images/icon-list.svg"
-            alt="icon Check">
-             <p>
-              Product discovery and building what matters
-            </p>
-            </li>
-          <li>
-            <img
-            class="check"
-            src="assets/images/icon-list.svg"
-            alt="icon Check">
-            <p>
-              Measuring to ensure updates are a success
-            </p>
-          </li>
-          <li>
-            <img
-            class="check"
-            src="assets/images/icon-list.svg"
-            alt="icon Check">
-            <p>
-              And much more!
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section class="login">
-        <p>
-          Email address
-          <span class="msgerro" id="msgerro">
-
-          </span>
-        </p>
-        <p>
-          <input class="box" type="email" name="email" id="iemail" 
-          placeholder="email@company.com">
-        </p>
-        <p>
-          <input id="buttonregister" class="button" type="submit" 
-          value="Subscribe to monthly newsletter">
-        </p>
-      </section> 
-      <section class="credits">
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Your Name Here</a>.
-        </div>
-      </section>
+    <section class="container_information">
+      <h1 class="container_information_title">Stay updated!</h1>
+      <p class="container_information_text">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="container_information_list">
+        <li>
+          <img src="./assets/images/icon-list.svg" alt="icons list">
+          <p class="container_information_text"> Product discovery and building what matters </p>
+        </li>
+        <li>
+          <img src="./assets/images/icon-list.svg" alt="icons list">
+          <p class="container_information_text"> Measuring to ensure updates are a success </p>
+        </li>
+        <li>
+          <img src="./assets/images/icon-list.svg" alt="icons list">
+          <p class="container_information_text"> And much more! </p>
+        </li>
+      </ul>
+      <form class="container_information_form">
+        <label id="label_email" for="email"> Email address </label>
+        <input type="email" id="email" placeholder="email@company.com">
+      </form>
+      <button class="btn" id="btn">Subscribe to monthly newsletter</button>
     </section>
-    <section id="invite" class="inviteoff">
-        <img class="check" src="assets/images/icon-success.svg" alt="Simbulo de confirmado">
-        <h1>
-          Thanks for subscribing!
-        </h1>
-        <p>
-          A confirmation email has been sent to <span id="msgemail"></span>. Please open it and click the button inside to confirm your subscription.
-        </p>
-        <button id="buttoninvite">
-          Dismiss message
-        </button>
-    </section>
+    <picture class="container_picture"></picture>
+    <!--<div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <img src="assets/images/icon-success.svg" alt="Simbulo de confirmado">
+    <h1>
+      Thanks for subscribing!
+    </h1>
+    <p>
+      A confirmation email has been sent to <span id="msgemail"></span>. Please open it and click the button inside to
+      confirm your subscription.
+    </p>
+    <button id="buttoninvite">
+      Dismiss message
+    </button>-->
   </main>
-  <script src="js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./js/server.js"></script>
 </body>
+
 </html>

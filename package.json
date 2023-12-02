@@ -1,0 +1,22 @@
+{
+  "name": "newsletter-sign-up-with-success-message-main",
+  "version": "1.0.0",
+  "description": "Project newsletter login",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheus369k/newsletter-sign-up-with-success-message-main.git"
+  },
+  "author": "matheus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheus369k/newsletter-sign-up-with-success-message-main/issues"
+  },
+  "homepage": "https://github.com/matheus369k/newsletter-sign-up-with-success-message-main#readme",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

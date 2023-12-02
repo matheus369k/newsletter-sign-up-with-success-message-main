@@ -1,177 +1,133 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 16px;
 }
 
 @font-face {
-    font-family: fontBold;
-    src: url('../assets/fonts/Roboto-Bold.ttf') format(opentype);
+  font-family: fontBold;
+  src: url("../assets/fonts/Roboto-Bold.ttf") format(opentype);
 }
-
 @font-face {
-    font-family: fontnormal;
-    src: url('../assets/fonts/Roboto-Regular.ttf') format(opentype);
+  font-family: fontnormal;
+  src: url("../assets/fonts/Roboto-Regular.ttf") format(opentype);
+}
+html, body {
+  font-family: fontBold;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(234, 29%, 20%);
+}
+html main, body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+  height: 650px;
+  width: 1024px;
+  column-gap: 20px;
+  border-radius: 40px;
+}
+html main .container_information, body main .container_information {
+  width: 60%;
+  padding: 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 30px;
+}
+html main .container_information_title, body main .container_information_title {
+  font-size: 4em;
+  color: hsl(234, 29%, 20%);
+}
+html main .container_information_text, body main .container_information_text {
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: hsl(235, 18%, 26%);
+}
+html main .container_information_list, body main .container_information_list {
+  row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+html main .container_information_list li, body main .container_information_list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  align-self: start;
+}
+html main .container_picture, body main .container_picture {
+  background: url("../assets/images/illustration-sign-up-desktop.svg") right center no-repeat local;
+  background-size: cover;
+  height: 100%;
+  width: 65%;
+  border-radius: 20px;
+}
+html main .container_information_form, body main .container_information_form {
+  width: 100%;
+  height: min-content;
+  row-gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+html main .container_information_form label, body main .container_information_form label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(234, 29%, 20%);
+}
+html main .container_information_form label span, body main .container_information_form label span {
+  color: rgba(255, 0, 0, 0.5058823529);
+  font-size: 14px;
+}
+html main .container_information_form input, body main .container_information_form input {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: calc(100% - 20px);
+  border: 2px solid hsl(231, 7%, 60%);
+  padding-left: 20px;
+  cursor: pointer;
+}
+html main .container_information_form input:focus, body main .container_information_form input:focus {
+  cursor: auto;
+  border: 2px solid hsl(235, 18%, 26%);
+}
+html main .container_information_form .err, body main .container_information_form .err {
+  border: 2px solid rgba(255, 0, 0, 0.2666666667);
+  color: rgba(255, 0, 0, 0.5058823529);
+  background-color: rgba(255, 0, 0, 0.124);
+}
+html main .btn, body main .btn {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+html main .btn:hover, body main .btn:hover {
+  background-image: linear-gradient(90deg, #f93c7e 0%, hsl(4, 100%, 67%) 100%);
 }
 
-body{
-    height: 100vh;
-
-    font-family: 'fontBold', 'fontnormal';
-    font: normal 1em;
-    background-color: hsl(234, 29%, 20%);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main{
-    background-color: rgb(255, 255, 255);
-}
-
-section.registeron section.picture{
-    background: url('../assets/images/illustration-sign-up-mobile.svg') top center no-repeat;
-    height: 300px;
-    width: 100%;
-    margin-bottom: 30px;
-    border-radius: 0px 0px 20px 20px;
-}
-
-section.registeron{
-    width: 375px;
-}
-
-section.text h1,
-section.inviteon h1{
-    font-size: 2.4em;
-    margin-bottom: 30px;
-}
-
-
-ul li{
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-}
-
-li p,
-section.inviteon p{
-    padding-top: 15px;
-}
-
-img.check{
-    margin-right: 10px;
-}
-
-section.text,
-section.login,
-section.inviteon{
-    font-size: 1em;   
-    margin: 30px 30px 20px;
-}
-
-ul{
-    list-style: none;
-}
-
-section.login{
-    margin-top: 40px;
-}
-
-p span.msgerro{
-    color: red;
-    margin-left: 90px;
-    font-size: .8em;
-}
-
-section.login input,
-section.inviteon button{
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    margin: 10px 0px 10px 5px;
-    height: 50px;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-input.button,
-section.inviteon button{
-    font-size: 1.1em;
-    font-weight: 600;
-    color: white;
-    background-color: hsl(233, 35%, 18%) ;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.521);
-    cursor: pointer;
-}
-
-input.button:hover,
-section.inviteon button:hover{
-    background-color:   hsl(4, 100%, 67%) ;
-}
-
-section.off{
-    display: none;
-}
-
-section.credits{
-    color:  hsl(234, 29%, 20%);
-    background-color:  hsl(0, 100%, 100%) ;
-
-    margin-bottom: 10px;
-
-    font-size: 0.6em;
-    text-align: center;
-}
-
-div a{
-    text-decoration: none;
-    color:  hsl(234, 29%, 20%);
-}
-
-div a:hover{
-    color: orangered;
-}
-
-section.registeroff{
-    display: none;
-}
-
-section.inviteoff{
-    display: none;
-}
-
-section.inviteon{
-    font-weight: normal;
-    width: 375px;
-    font-size: 1.3em;
-    height: 800px;
-    
-}
-
-
-section.inviteon img.check{
-    width: 60px;
-    margin: 100px 0px 20px;
-}
-
-section.inviteon h1{
-    margin-right: 70px;
-}
-
-section.inviteon button{
-    padding: 5px;
-    margin: 300px 0px 20px;
-}
-
-p span#msgemail{
-    font-weight: 900;
-    font-size: 1.2em;
-}
-
-input.erro{
-    background-color: rgba(255, 0, 0, 0.171);
-    color:red;
-}
-
+/*# sourceMappingURL=style.css.map */
