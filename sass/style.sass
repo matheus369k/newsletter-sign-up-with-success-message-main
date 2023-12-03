@@ -15,6 +15,12 @@ html, body
 
     background-color: variables.$color-darkgreay
 
+    @include mixins.responsive_924()
+        align-items: flex-start
+
+    @include mixins.responsive_height_924()
+        align-items: center
+    
     main
 
         @include mixins.flex-center()
@@ -23,12 +29,42 @@ html, body
 
         padding: 20px
 
+        margin: 0 20px
+
         height: 650px
         width: 1024px
 
         column-gap: 20px
 
         border-radius: 40px
+
+        @include mixins.responsive_1124()
+            height: 500px
+            width: 924px
+
+        @include mixins.responsive_924()
+            flex-direction: column-reverse
+
+            width: 564px
+            height: 924px
+
+            padding: 0px
+            padding-bottom: 40px
+
+            margin: 50px
+
+            border-radius: 20px
+
+        @include mixins.responsive_624()
+            width: 100vw  
+            min-height: calc(100vh - 40px)  
+            height: max-content
+
+            justify-content: start 
+
+            margin: 0px
+
+            border-radius: 0px
 
         .container_information
 
@@ -43,16 +79,41 @@ html, body
 
             row-gap: 30px
 
+            @include mixins.responsive_1124()
+                row-gap: 20px
+
+                padding: 0 30px
+
+            @include mixins.responsive_924()
+                width: max-content
+
+                padding: 0 
+
+            @include mixins.responsive_624()
+                width: calc(100vw - 100px)  
+                height: 100%
+
+            @include mixins.responsive_464()
+                width: calc(100vw - 30px)  
+
             &_title
                 font-size: 4em
 
                 color: variables.$color-darkgreay
 
+                @include mixins.responsive_1124()
+                    font-size: 3.5em
+
+                @include mixins.responsive_464()
+                    font-size: 2.8em
+                    
             &_text
-                letter-spacing: 1px
                 line-height: 28px
 
                 color: variables.$color-charcoalgray
+
+                @include mixins.responsive_464()
+                    font-size: .9em
 
             &_list
                 row-gap: 15px
@@ -67,6 +128,9 @@ html, body
                     column-gap: 20px
 
                     align-self: start
+
+                @include mixins.responsive_464()
+                    font-size: .9em
                    
 
 
@@ -77,6 +141,21 @@ html, body
             width: 65%
             
             border-radius: 20px
+
+            @include mixins.responsive_924()
+                width: 100%
+                height: 100%
+
+                margin-bottom: 50px
+
+                @include mixins.bg-img("../assets/images/illustration-sign-up-mobile.svg")
+
+
+            @include mixins.responsive_624()
+                width: 100vw
+                height: 25vh
+            
+                border-radius: 0px 0px 10px 10px
 
         .container_information_form 
             width: 100%
@@ -100,12 +179,12 @@ html, body
                 span 
                     color: #ff000081
 
-
                     font-size: 14px
+
 
             input 
                 @include mixins.btn-input()
-                width: calc( 100% - 20px )
+                width: calc( 100% - 22px )
                 
                 border: 2px solid variables.$color-light-gray
 
@@ -125,17 +204,68 @@ html, body
 
                 background-color: rgba(255, 0, 0, 0.124)
 
-
         .btn 
-            @include mixins.btn-input()
-
-            background-color: variables.$color-darkgreay
-            color: variables.$color-white
-
-            cursor: pointer
-
+            @include mixins.btn()
+            
             &:hover
                 background-image: variables.$btn-gradient
             
 
+    .contianer_confirmation 
+        background-color: variables.$color-white
+        color: black
+
+        padding: 60px
+
+        width: 350px
+        height: 370px
+
+        border-radius: 30px
+
+        @include mixins.flex-center()
+
+        flex-direction: column
+
+        row-gap: 20px
+
+        @include mixins.responsive_924()
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+
+        @include mixins.responsive_464()
+            width: calc(100vw - 40px)
+            height: 100vh
+
+
+        img 
+            width: 60px
+            height: 60px
+            border-radius: 50%
+
+            align-self: flex-start
+
+        
+        h1
+            font-size: 3.2em
+
+            color: variables.$color-darkgreay
+
+            @include mixins.responsive_464()
+            font-size: 2.8em
+
+        .text
+            line-height: 22px
+            font-size: 14px
+
+            color: variables.$color-charcoalgray
+
+            span
+                color: variables.$color-darkgreay
+
+        button 
+            @include mixins.btn()
+
+            &:hover
+                background-image: variables.$btn-gradient  
 

@@ -13,7 +13,7 @@
     align-items: center
 
 @mixin bg-img($url)
-    background: url($url) right center no-repeat local
+    background: url($url) center center no-repeat local
     background-size: cover
 
 @mixin max-content 
@@ -28,3 +28,40 @@
 
     font-size: 18px
 
+@mixin btn()
+    @include btn-input()
+
+    width: 100%
+
+    background-color: variables.$color-darkgreay
+    color: variables.$color-white
+                
+    border: 2px solid variables.$color-darkgreay
+
+    cursor: pointer
+    
+@mixin responsive_1124()
+    @media (max-width: 1124px)
+        @content
+
+    
+@mixin responsive_height_924()
+    @media (min-height: 924px)
+        @content
+
+    
+@mixin responsive_924()
+    @media (max-width: 924px)
+        @content
+
+    
+@mixin responsive_624()
+    @media (max-width: 624px)
+        @content
+
+    
+@mixin responsive_464()
+    @media (max-width: 464px)
+        @content
+  
+   
