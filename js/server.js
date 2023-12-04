@@ -2,7 +2,7 @@ const input = $('#email');
 const label_email = $('#label_email')
 
 
-$('#btn').click(function (e) { 
+$('#btn').click(function (e) {
 
     e.preventDefault();
 
@@ -11,7 +11,7 @@ $('#btn').click(function (e) {
     return
 });
 
-$(input).change(function () { 
+$(input).change(function () {
 
     MsgError('valid');
 
@@ -23,13 +23,13 @@ function Verification() {
 
     const inputValue = $(input).val();
 
-    if (inputValue.slice(Number(inputValue.length)-10, Number(inputValue.length)) !== '@gmail.com') {
+    if (inputValue.slice(Number(inputValue.length) - 10, Number(inputValue.length)) !== '@gmail.com') {
 
         MsgError('inval');
 
         return
 
-    }else if (Number(inputValue.length) < 14) {
+    } else if (Number(inputValue.length) < 14) {
 
         MsgError('inval');
 
@@ -52,21 +52,20 @@ function Verification() {
 
     const listCreater = {
         img: './assets/images/icon-success.svg',
-        h1: 'Thanks for subscribing!', 
-        p: 'A confirmation email has been sent to', 
+        h1: 'Thanks for subscribing!',
+        p: 'A confirmation email has been sent to',
         span: ` ${inputValue}. `,
         p_cont: 'Please open it and click the button inside to confirm your subscription.',
         button: 'Dismiss message'
     }
-    
+
     const listCreaterKeys = Object.keys(listCreater)
     const listCreaterValues = Object.values(listCreater)
 
     for (let index = 0; index < 6; index++) {
-        
-        if ( index === 4) 
-        {
-            document.querySelector('.text').innerHTML+=`${listCreaterValues[index]}`;
+
+        if (index === 4) {
+            document.querySelector('.text').innerHTML += `${listCreaterValues[index]}`;
 
             continue
 
@@ -74,64 +73,52 @@ function Verification() {
 
         const creatertag = document.createElement(`${listCreaterKeys[index]}`)
 
-        if (index === 2) 
-        {
-            
+        if (index === 2) {
+
             creatertag.setAttribute('class', 'text')
 
         }
-        
-        if (index === 0) 
-        {
+
+        if (index === 0) {
 
             creatertag.setAttribute('src', `${listCreaterValues[index]}`)
 
-        } 
-        else 
-        {
-            
+        }
+        else {
+
             $(creatertag).text(`${listCreaterValues[index]}`);
         }
 
-        if ( index === 3 ) 
-        {
-        
+        if (index === 3) {
+
             $('.text').append(creatertag);
 
             continue
-            
+
         }
-        
+
         $(div).append(creatertag);
-        
+
     }
-
-    //const p = document.createElement('p')
-
-    //$(p).text(`A confirmation email has been sent to ${inputValue}. Please open it and click the button inside to
-    //confirm your subscription.`);
-
-    //const btn = document.createElement('button');
-
-    //$(btn).text('Dismiss message');
-    
 
     return
 };
 
 
-function MsgError(verif) {
+function MsgError(verif) 
+{
 
-    if (verif === 'valid') {
-    
+    if (verif === 'valid') 
+    {
+
         $('#msgErroGmail').remove();
 
         $(input).removeClass('err');
 
-        return
 
-
-    }else if (verif === 'inval' && document.querySelector('#msgErroGmail') === null){
+    }
+    else if (verif === 'inval' && document.querySelector('#msgErroGmail') === null) 
+    {
 
         const span = document.createElement('span');
 
@@ -143,7 +130,6 @@ function MsgError(verif) {
 
         $(input).addClass("err");
 
-        return
     }
 
     return

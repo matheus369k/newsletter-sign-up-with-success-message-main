@@ -19,6 +19,27 @@
   font-family: fontnormal;
   src: url("../assets/fonts/Roboto-Regular.ttf") format(opentype);
 }
+@keyframes loading-inital {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes input-err {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 html, body {
   font-family: fontBold;
   width: 100vw;
@@ -41,6 +62,8 @@ html, body {
   }
 }
 html main, body main {
+  animation: loading-inital 1.5s ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4980392157);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +94,7 @@ html main, body main {
 }
 @media (max-width: 624px) {
   html main, body main {
+    animation: loading-inital none;
     width: 100vw;
     min-height: calc(100vh - 40px);
     height: max-content;
@@ -80,6 +104,7 @@ html main, body main {
   }
 }
 html main .container_information, body main .container_information {
+  animation: loading-inital 2s ease-in-out;
   width: 60%;
   padding: 0 60px;
   display: flex;
@@ -161,8 +186,9 @@ html main .container_picture, body main .container_picture {
 }
 @media (max-width: 924px) {
   html main .container_picture, body main .container_picture {
-    width: 100%;
+    width: calc(100% - 20px);
     height: 100%;
+    margin-top: 10px;
     margin-bottom: 50px;
     background: url("../assets/images/illustration-sign-up-mobile.svg") center center no-repeat local;
     background-size: cover;
@@ -171,8 +197,10 @@ html main .container_picture, body main .container_picture {
 @media (max-width: 624px) {
   html main .container_picture, body main .container_picture {
     width: 100vw;
+    min-height: 300px;
     height: 25vh;
-    border-radius: 0px 0px 10px 10px;
+    margin-top: 0px;
+    border-radius: 0px 0px 20px 20px;
   }
 }
 html main .container_information_form, body main .container_information_form {
@@ -210,6 +238,7 @@ html main .container_information_form input:focus, body main .container_informat
   border: 2px solid hsl(235, 18%, 26%);
 }
 html main .container_information_form .err, body main .container_information_form .err {
+  animation: input-err 0.5s ease-in-out;
   border: 2px solid rgba(255, 0, 0, 0.2666666667);
   color: rgba(255, 0, 0, 0.5058823529);
   background-color: rgba(255, 0, 0, 0.124);

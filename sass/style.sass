@@ -6,6 +6,8 @@
 
 @import 'fonts'
 
+@import 'animations'
+
 html, body
     font-family: fontBold
 
@@ -22,6 +24,9 @@ html, body
         align-items: center
     
     main
+        animation: loading-inital 1.5s ease-in-out
+
+        box-shadow: 5px 5px 10px #0000007f
 
         @include mixins.flex-center()
 
@@ -56,6 +61,8 @@ html, body
             border-radius: 20px
 
         @include mixins.responsive_624()
+            animation: loading-inital none
+
             width: 100vw  
             min-height: calc(100vh - 40px)  
             height: max-content
@@ -67,6 +74,7 @@ html, body
             border-radius: 0px
 
         .container_information
+            animation: loading-inital 2s ease-in-out
 
             width: 60%
             padding: 0 60px
@@ -143,9 +151,10 @@ html, body
             border-radius: 20px
 
             @include mixins.responsive_924()
-                width: 100%
+                width: calc(100% - 20px)
                 height: 100%
 
+                margin-top: 10px
                 margin-bottom: 50px
 
                 @include mixins.bg-img("../assets/images/illustration-sign-up-mobile.svg")
@@ -153,9 +162,12 @@ html, body
 
             @include mixins.responsive_624()
                 width: 100vw
+                min-height: 300px
                 height: 25vh
+
+                margin-top: 0px
             
-                border-radius: 0px 0px 10px 10px
+                border-radius: 0px 0px 20px 20px
 
         .container_information_form 
             width: 100%
@@ -182,7 +194,7 @@ html, body
                     font-size: 14px
 
 
-            input 
+            input
                 @include mixins.btn-input()
                 width: calc( 100% - 22px )
                 
@@ -198,6 +210,8 @@ html, body
                     border: 2px solid variables.$color-charcoalgray
 
             .err
+                animation: input-err .5s ease-in-out 
+
                 border: 2px solid #ff000044
 
                 color: #ff000081
