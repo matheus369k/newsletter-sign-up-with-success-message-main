@@ -113,8 +113,7 @@ html main, body main {
   }
 }
 html main .container_information, body main .container_information {
-  transition-delay: 0.5s;
-  animation: loading-inital 1.5s ease-in-out;
+  animation: loading-inital 2s ease-in-out;
   width: 60%;
   padding: 0 20px;
   display: flex;
@@ -272,8 +271,7 @@ html main .btn:hover, body main .btn:hover {
 html .contianer_confirmation, body .contianer_confirmation {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5607843137);
-  transition-delay: 0.5s;
-  animation: confirmation 1s ease-out;
+  animation: confirmation 1s ease-in-out;
   color: black;
   padding: 40px;
   width: 420px;
