@@ -8,14 +8,14 @@
 
 - HTML5
 - Sass
-- JavaScrip
+- JavaScript
 - JQuery
 
 ## ⚙️Desenvolvimento
 
-- O foco do Projeto fora o desenvolvimento das habilidades de estilização de paginas com o __Sass__ e Pratica de logica com o __JavaScript__ e  sua biblioteca __JQuery__.
+- O foco do Projeto fora o desenvolvimento das habilidades de estilização de paginas com o __Sass__ e Pratica de logica com o __JavaScript__ e sua biblioteca __JQuery__.
 
-- Fora utilizado __MediaQuerys__ nos estilo para deixar a pagina responsiva em todos as telas.
+- Fora utilizado __MediaQuerys__ nos estilos para deixar a pagina responsiva.
 
 - Na criação das animações fora utilizado o __@keyframe__ para cria-la e a __animation__ para adiciona-la no lugar desejado.
 
